@@ -1,0 +1,90 @@
+doctype html
+
+html(lang='en')
+  head
+    include menu.pug
+    script(src='jquery-3.3.1.min.js')
+  body
+    .jumbotron.text-center
+      h1 Peer Tutoring
+    title Tool Bar
+    
+
+    include navbar.pug
+
+    form(action='/action_page.php')
+  .form-group
+    label(for='email') Tutor Email:
+    input#email.form-control(type='email')
+  .form-group
+    label(for='pwd') Tutee Email:
+    input#pwd.form-control(type='password')
+  
+
+  h5 Date and Time
+  .container
+  .row
+    .col-sm-6
+      .form-group
+        #datetimepicker1.input-group.date
+          input.form-control(type='text')
+          span.input-group-addon
+            span.glyphicon.glyphicon-calendar
+    script(type='text/javascript').
+      $(function () {
+      $('#datetimepicker1').datetimepicker();
+      });
+    
+  button.btn.btn-default(type='submit') Submit
+  
+
+
+.container
+  .row
+    .col-xl-8.offset-xl-2.py-5
+      h1
+        | Tutoring Arrangement
+       
+     
+      form#contact-form(method='post' action='contact.php' role='form')
+        .messages
+        .controls
+          .row
+            .col-md-6
+              .form-group
+                label(for='form_name') Firstname *
+                input#form_name.form-control(type='text' name='name' placeholder='Please enter your firstname *' required='required' data-error='Firstname is required.')
+                .help-block.with-errors
+            .col-md-6
+              .form-group
+                label(for='form_lastname') Lastname *
+                input#form_lastname.form-control(type='text' name='surname' placeholder='Please enter your lastname *' required='required' data-error='Lastname is required.')
+                .help-block.with-errors
+          .row
+            .col-md-6
+              .form-group
+                label(for='form_email') Email *
+                input#form_email.form-control(type='email' name='email' placeholder='Please enter your email *' required='required' data-error='Valid email is required.')
+                .help-block.with-errors
+            .col-md-6
+              .form-group
+                label(for='form_email') Date *
+                input#form_email.form-control(type='email' name='email' placeholder='Please enter your email *' required='required' data-error='Valid email is required.')
+                .help-block.with-errors
+          .row
+            .col-md-12
+              .form-group
+                label(for='form_message') Message *
+                textarea#form_message.form-control(name='message' placeholder='Message for me *' rows='4' required='required' data-error='Please, leave us a message.')
+                .help-block.with-errors
+            .col-md-12
+              input.btn.btn-success.btn-send(type='submit' value='Send message')
+          
+    // /.8
+  // /.row
+// /.container
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js' integrity='sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=' crossorigin='anonymous')
+script(src='contact.js')
