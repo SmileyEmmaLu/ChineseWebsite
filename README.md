@@ -32,4 +32,7 @@ Post is used for nodemailer. **var mailOptions** takes in the sender email and r
 ![image](mail.png)
 **transportor.sentMail** sends the email and gives and error is the email was not sent. It also redirects the user back to the tutoring page. 
 
-### users.js
+## Notes
+To pick up on this project, soem things to keep in mind are:
+** The Auth0 Login does not link to the Peer Tutoring page currently.
+** In order to run the nodemailer, you would have to install nodemailer in terminal (**npm install nodemailer --save**)
