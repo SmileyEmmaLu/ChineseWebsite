@@ -28,5 +28,8 @@ index.js holds the post and get functions.
 There is a router.get for every page (index, tutoring, login, resources, and entertainment) that renders the page and the title.
 ![image](get.png)
 #### POST
-Post is used for nodemailer. **var mailOptions** takes in the sender email and reads in from the the slots on the form for the other information (names, date, time). **transportor.sentMail**
+Post is used for nodemailer. **var mailOptions** takes in the sender email and reads in from the the slots on the form for the other information (names, date, time).
+![image](mail.png)
+**transportor.sentMail** sends the email and gives and error is the email was not sent. It also redirects the user back to the tutoring page. 
+
 ### users.js
